@@ -1,149 +1,210 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Cycler</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://wallpapers.com/images/hd/professional-background-4b31fgiuezafrguu.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-            color: black;
-        }
-        #image-cycler {
-            width: auto;
-            height: 300px;
-            object-fit: contain;
+        #image-cycler { 
+            width: auto; 
+            height: 300px; 
+            object-fit: contain; 
             display: block;
-            margin: 0 auto;
+            margin: 0 auto; 
         }
+        body {
+            background-image: url('https://wallpapers.com/images/hd/professional-background-4b31fgiuezafrguu.jpg');
+            background-attachment: fixed;  /* Keeps the background fixed */
+            background-position: center center;  /* Centers the background image */
+            background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
+            background-size: cover;  /* Makes sure the image covers the entire viewport */
+            margin: 0;
+            height: 100vh;  /* Ensures the background covers the full viewport height */
+        }
+        .content { margin-top: 20px; padding: 20px; }
+        .buttons { text-align: center; }
+        .buttons button { margin: 10px; padding: 10px; font-size: 16px; }
         .content {
-            margin-top: 20px;
+            color: black;
             padding: 20px;
+            font-family: Arial, sans-serif;
         }
-        .buttons {
-            text-align: center;
-        }
-        .buttons button {
-            margin: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
+    </style>
     </style>
 </head>
 <body>
     <img id="image-cycler" src="photos/max.jpg" alt="Image Cycler">
     <div class="buttons">
-        <button id="prev">Попереднє / Previous</button>
-        <button id="next">Наступне / Next</button>
-        <button id="language-switcher">Переключити на англійську / Switch to English</button>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
     </div>
     <div class="content">
-        <p id="dedication">Ця сторінка присвячена нашим молодшим братам, Данілу та Олексію, які трагічно загинули нещодавно. Любов і спокій, / This page is dedicated to our younger brothers, Daniil and Oleksey, who tragically passed away recently. Love and Rest In Peace,</p>
-        <p id="intro">Дорогі друзі, нас звуть Дмитро та Максим. / Dear friends, our names are Dmitro and Maksym.</p>
-        <p id="description">Ця сторінка створена для нашої гуманітарної організації. Наразі всю нашу волонтерську роботу фінансуємо ми самі за рахунок особистого доходу та донорів, яких ми отримуємо від щедрих волонтерів (показано нижче). Однак додаткове фінансування дозволить надати більше допомоги, яку ми не можемо забезпечити за допомогою заробітної плати. / This page is created for our humanitarian relief organization. Currently, all our volunteering work is funded by ourselves with personal income and donations we've received from generous volunteers (shown below). However, more funding can provide additional aid, which we cannot fund with a paycheck.</p>
-        <p id="update">Оновлення: Будучи частиною масових скорочень в Бей-Реа, наразі і в найближчій перспективі, наша волонтерська діяльність може бути профінансована лише за рахунок донатів. / Update: Being a part of the Bay Area massive wave of layoffs, currently, and for the next short term, the volunteer work can only be funded through donations.</p>
-        <p id="record">Нижче наведено запис про те, що ми завершили на власні кошти і що ми плануємо зробити за фінансуванням донорів. За поточний дохід ми продовжимо в такому ж темпі, але більше можна досягти з додатковим фінансуванням. / Below is a record of what we have finished so far at our own expense and what we are looking to do with funds provided by donations. With the current income, we will continue at this steady pace, but more can be accomplished with additional funding.</p>
-        <p id="donation-thanks">Ми оновлюємо цю сторінку щотижня і вносимо всіх донорів вручну, як тільки надходять донати. Будь-яка сума або поширення вітаються. Всі донати 100% йдуть на покупку необхідних товарів, гуманітарну допомогу, житло або інші потреби. Ми можемо надати чеки та фото для кожного, хто цього потребує. Дякуємо всім. / We will update this page every week and manually enter all donors as donations arrive. Any amount or sharing is appreciated. All donations will 100% go toward purchasing supplies, humanitarian aid, housing, or other donations. We can provide receipts and photos for anyone who requests them. Thank you to everyone.</p>
-        <p id="completed">Завершено особисто: / Completed Personally:</p>
-        <ul id="completed-list">
-            <li>350 годин волонтерської роботи = $8750 у вигляді співфінансування компанії на користь кількох обраних фондів для України / 350 hours of volunteer work = $8750 in co-funding for several selected Ukraine-related funds</li>
-            <li>Постійна фінансова підтримка кількох сімей = $3000 (приблизно) / Ongoing financial support for several families = $3000 (approx.)</li>
+        <p>This page is dedicated to o younger brothers, Daniil and Oleksey, who tragically passed away recently. Love and Rest In Peace,</p>
+        <p>Dear friends, our names are Dmitro and Maksym.</p>
+        <p>This page is created for our humanitarian relief organization. Currently, all our volunteering work is funded by ourselves with personal income and donations we've received from generous volunteers (shown below), However, more funding can provide additional aid, which we cannot fund with a paycheck.</p>
+        <p>Update: Being a part of the Bay Area massive wave of layoffs, currently, and for the next short term, the volunteer work can only be funded through donations.</p>
+        <p>Below is a record of what we have finished so far at our own expense and what we am looking to do with funds provided by donations. With the current income we will continue at this steady pace, but more can be accomplished with additional funding.</p>
+        <p>We will update this page every week and manually enter all donors as donations arrive. Any amount or sharing is appreciated. All donations will 100% go toward purchasing supplies, humanitarian aid, housing, or other donations. We can provide receipts and photos to anyone who needs. Thank you all.</p>
+        <p>Completed Personally:</p>
+        <ul>
+            <li>350 hours volunteer time = $8750 in company match donations to several select Ukraine funds</li>
+            <li>Ongoing financial support for multiple families = $3000(approx)</li>
         </ul>
-        <p id="update-2024">Оновлення на 2024 рік: / 2024 Update:</p>
-        <ul id="update-2024-list">
-            <li>40 турнікетів CAT7 та SOF / 40 CAT7 and SOF tourniquets</li>
-            <li>Надіслано ще 2 тепловізори AGM / Sent another 2 AGM thermal imaging devices</li>
-            <li>частини для 5 FPV дронів / Sent parts for 5 FPV drones</li>
-            <li>1 дрон DJI Mavic / Sent 1 DJI Mavic drone</li>
-            <li>1 нічний приціл Armalite / Sent 1 Armalite night vision scope</li>
-            <li>4 тепловізори AGM / Sent 4 AGM thermal imaging devices</li>
-            <li>5 FPV дронів / Sent 5 FPV drones</li>
-            <li>3 контролери Pixhawk для автопілота / Sent 3 Pixhawk autopilot controllers</li>
-            <li>Спонсоровано 4 українських біженців за кордоном / Sponsored 4 Ukrainian refugees abroad</li>
-            <li>13 сумок з постачаннями доставлено до аеропорту Варшави / Delivered 13 bags of supplies to Warsaw airport</li>
-            <li>Закуплено в США, Польщі та передано постачання (використовуючи час на відпустку по втраті) ~ $6000: / Purchased in the USA, Poland, and delivered supplies (using time off due to loss) ~ $6000:</li>
-            <ul>
-                <li>1 автомобіль, хетчбек Ford Focus 2002 року / 1 car, 2002 Ford Focus hatchback</li>
-                <li>1 тепловізор / 1 thermal imaging device</li>
-                <li>12 оптики / 12 optics</li>
-                <li>12 комплектів для Weaver / 12 Weaver kits</li>
-                <li>12 ліхтариків / 12 flashlights</li>
-                <li>6 бронежилетів AR500 / 6 AR500 bulletproof vests</li>
-                <li>15 спальних мішків на 0 градусів / 15 sleeping bags rated for 0°C</li>
-                <li>20 павербанків / 20 power banks</li>
-                <li>2 генератори / 2 generators</li>
-                <li>10 інверторів / 10 inverters</li>
-                <li>2 автомобільні акумулятори / 2 car batteries</li>
-                <li>3 пари військових черевиків / 3 pairs of military boots</li>
-                <li>10 калош / 10 galoshes</li>
-                <li>3 рюкзаки / 3 backpacks</li>
-                <li>2 ноутбуки / 2 laptops</li>
-                <li>2 зимових костюми / 2 winter suits</li>
-                <li>30 USB ліхтариків / 30 USB flashlights</li>
-                <li>20 пар рукавичок / 20 pairs of gloves</li>
-                <li>Різноманітні медичні засоби / Various medical supplies</li>
-                <li>30 турнікетів CAT7 та SOF / 30 CAT7 and SOF tourniquets</li>
-                <li>60 цивільних медичних наборів / 60 civilian medical kits</li>
-                <li>10 герметичних пластирів / 10 airtight dressings</li>
-                <li>Ліки, антибіотики, знеболювальні, бинти, пластирі тощо. / Medicines, antibiotics, painkillers, bandages, plasters, etc.</li>
-                <li>100 кг корму для собак / 100kg dog food</li>
-            </ul>
+		<p>Updates for 2024:</p>
+        <ul>
+		<ul>
+    <li>Sent 2 more AGM Thermal Monoculars / Надіслано ще 2 тепловізори AGM</li>
+    <li>Sent parts for 5 FPV drones / Надіслано запчастини для 5 FPV дронів</li>
+    <li>Sent 1 DJI Mavic Drone / Надіслано 1 дрон DJI Mavic</li>
+    <li>Sent 1 Armalite nightvision monocular / Надіслано 1 моноокуляр Armalite з нічним баченням</li>
+    <li>Sent 4 AGM Thermal Monoculars / Надіслано 4 тепловізори AGM</li>
+    <li>Sent 5 FPV drones / Надіслано 5 FPV дронів</li>
+    <li>Sent 3 Pixhawk autopilot controllers / Надіслано 3 контролери автопілота Pixhawk</li>
+    <li>Sponsored 4 Ukrainian refugees abroad / Спонсоровано 4 українських біженців за кордоном</li>
+    <li>13 luggage supply bags delivered to Warsaw airport / 13 сумок для постачання доставлено в аеропорт Варшави</li>
+    <li>Purchased in USA, Poland, and donated supplies (using Bereavement time) ~ $6000:
+        <ul>
+            <li>1 car, 2002 Ford Focus hatchback / 1 автомобіль, хетчбек Ford Focus 2002 року</li>
+            <li>1 thermal monocular / 1 тепловізор</li>
+            <li>12 optics / 12 оптичних приладів</li>
+            <li>12 weaver kits / 12 комплектів Weaver</li>
+            <li>12 flashlights / 12 ліхтарів</li>
+            <li>6 AR500 armor vests / 6 бронежилетів AR500</li>
+            <li>15 zero deg sleeping bags / 15 спальних мішків на -0°C</li>
+            <li>20 power banks / 20 павербанків</li>
+            <li>2 generators / 2 генератори</li>
+            <li>10 inverters / 10 інверторів</li>
+            <li>2 car batteries / 2 автомобільні акумулятори</li>
+            <li>3 pairs of mil boots / 3 пари військових чобіт</li>
+            <li>10 galoshes / 10 калош</li>
+            <li>3 backpacks / 3 рюкзаки</li>
+            <li>2 laptops / 2 ноутбуки</li>
+            <li>2 winter uniforms / 2 зимових форми</li>
+            <li>30 USB lights / 30 USB ліхтариків</li>
+            <li>20 pair gloves / 20 пар рукавичок</li>
+            <li>Various medical supplies / Різні медичні засоби</li>
+            <li>30 CAT7 and SOF tourniquets / 30 джгутів CAT7 та SOF</li>
+            <li>60 civilian med kits / 60 медичних наборів для цивільних</li>
+            <li>10 chest seals / 10 грудних герметиків</li>
+            <li>Drugs, antibiotics, painkillers, bandages, patches, etc. / Ліки, антибіотики, знеболювальні, бинти, пластирі та ін.</li>
+            <li>100 kg dog food / 100 кг корму для собак</li>
         </ul>
-        <p id="thank-you">Дякуємо донорам: / Thank you to our donors:</p>
-        <ul id="donors-list">
-            <li>Семен, Максим, Микита, Степан, Артем / Semen, Maksym, Mykyta, Stepan, Artem</li>
-            <li>Олена, Павло, Оксана / Olena, Pavlo, Oksana</li>
+    </li>
+</ul>
+<ul>
+    <li>20 class 3 armor vests with 40 AR500 6mm plates and custom coating / 20 бронежилетів класу 3 з 40 пластинами AR500 6 мм та індивідуальним покриттям</li>
+    <li>Item donations to Kharkiv bought and brought from USA = ($4000 total):
+        <ul>
+            <li>20 NAR CAT7 tourniquets / 20 джгутів NAR CAT7</li>
+            <li>20x uniforms / 20 комплектів форми</li>
+            <li>20x gloves / 20 пар рукавичок</li>
+            <li>2x boots / 2 пари чобіт</li>
+            <li>1x military backpack / 1 військовий рюкзак</li>
+            <li>1x helmet / 1 шолом</li>
+            <li>60L fuel / 60 літрів пального</li>
+            <li>3x plate carrier / 3 бронежилети</li>
+            <li>4x pouch / 4 сумки</li>
+            <li>8x utility bag / 8 господарських сумок</li>
+            <li>16x kneepads / 16 наколінників</li>
+            <li>2x power banks / 2 павербанки</li>
+            <li>1x solar panel / 1 сонячна панель</li>
+            <li>15x folding shovels / 15 складних лопат</li>
+            <li>8x sleeping bags / 8 спальних мішків</li>
+            <li>11x soldier medkits / 11 медичних наборів для солдатів</li>
+            <li>50x civilian med kits (hemostatic bandage, tourniquet, antibiotic, bandage) / 50 медичних наборів для цивільних (гемостатичний бинт, джгут, антибіотик, бинт)</li>
+            <li>2x ceramic Level 3 carrier plates / 2 керамічні пластини рівня 3</li>
+            <li>2x AR500 steel level 3 carrier plates / 2 сталеві пластини AR500 рівня 3</li>
+            <li>1x DJI Mavic2 drone / 1 дрон DJI Mavic2</li>
+            <li>1x Armalite nightvision optic / 1 оптика Armalite з нічним баченням</li>
+            <li>1x AGM scout thermal optic / 1 тепловізійна оптика AGM Scout</li>
+            <li>1x laptop / 1 ноутбук</li>
+            <li>3x 3x9x40 optics / 3 оптики 3x9x40</li>
+            <li>1x Holosun holographic sight / 1 голографічний приціл Holosun</li>
+            <li>8x weaver rail accessories / 8 аксесуарів для рейок Weaver</li>
         </ul>
-        <p id="contact">Якщо ви зробили донат і вас немає в списку, або хочете зв’язатися зі мною, будь ласка, напишіть на мій email. / If you have donated and are missing from the list, or would like to contact me, please reach out to my email.</p>
-    </div>
+    </li>
+    <li>Transportation of 20 bags for others from USA to Warsaw, Poland - 0.5 tonnes of supplies / Транспортування 20 сумок для інших з США до Варшави, Польща - 0,5 тонни постачання</li>
+    <li>Covering evacuation fees for family from occupied Kherson to Zaporizhia / Покриття витрат на евакуацію родини з окупованого Херсона до Запоріжжя</li>
+</ul>
+<ul>
+    <li>Manufacture, order, and shipment of 26 AR400 armor plates to Kharkiv / Виготовлення, замовлення та відправка 26 бронепластин AR400 до Харкова</li>
+    <li>Purchase, packaging, and shipment of food, medicine, clothes, and supplies to soldiers in Kharkiv / Закупівля, упаковка та відправка їжі, ліків, одягу та постачання солдатам у Харкові</li>
+    <li>Donation of gas masks, antibiotics, bags, tourniquets, quickclot, and sleeping bags to soldiers in Cherkassy / Пожертва газових масок, антибіотиків, сумок, джгутів, QuickClot і спальних мішків солдатам у Черкасах</li>
+    <li>Transportation of people from Ukraine/Poland border to resettle within Poland = 35 persons so far to Krakow (3hr), Wroclaw(5hr), Poznan(8hr), Warsaw(5hr), Katowice(4hr) / Транспортування людей з кордону України/Польщі до місць поселення в Польщі = 35 осіб до Кракова (3 год), Вроцлава (5 год), Познані (8 год), Варшави (5 год), Катовіце (4 год)</li>
+    <li>Temporary housing for families = Rent for 1 month for family of 2 / Тимчасове житло для родин = Оренда на 1 місяць для родини з 2 осіб</li>
+    <li>Temporary housing for families = Large apartment with 3 rooms and 7 days stay in Krakow / Тимчасове житло для родин = Велика квартира з 3 кімнатами та 7 днів перебування в Кракові</li>
+    <li>Purchase and delivery of bulk food and supplies to Ukraine = 4 deliveries, 4000lbs total / Закупівля та доставка оптової їжі та постачання в Україну = 4 поставки, 4000 фунтів загалом</li>
+    <li>Direct monetary donations to various families / Прямі грошові пожертви різним родинам</li>
+    <li>Acquired a car with registration to cross borders into Ukraine / Придбано автомобіль з реєстрацією для перетину кордону в Україну</li>
+    <li>Feeding abandoned pets in Kyiv, Lviv, and Irpin regions / Годування покинутих тварин у Києві, Львові та Ірпіні</li>
+</ul>
+<p>Completed with other foundations:</p>
+<ul>
+    <li>Driver to Cherkassy Oblast, transportation of 2 full cars of food and evacuation of 15 people / Водій до Черкаської області, транспортування 2 повних машин їжі та евакуація 15 осіб</li>
+    <li>Driver and delivery of 4 transportation vans to Lviv to transport people from Kyiv organized and funded by Every Nation Madrid <a href="www.vidapasionada.org">www.vidapasionada.org</a> / Водій та доставка 4 транспортних фургонів до Львова для транспортування людей з Києва, організоване та профінансоване Every Nation Madrid <a href="www.vidapasionada.org">www.vidapasionada.org</a></li>
+    <li>Retrofit and paint old school building to house 800 people, project by Patrycjusz Gaweł <a href="https://zrzutka.pl/unitatem">https://zrzutka.pl/unitatem</a> / Переробка та фарбування старої школи для розміщення 800 осіб, проект Патриціуса Гавела <a href="https://zrzutka.pl/unitatem">https://zrzutka.pl/unitatem</a></li>
+</ul>
+<p>Note: Under Ukrainian law photos of military and military activity are not allowed, unless provided by recipients with blurred faces. / Примітка: За українським законодавством фото військових та військових дій заборонені, якщо вони не надані одержувачами з розмитими обличчями.</p>
+<p>Thank you donors: / Дякуємо донорам:</p>
+<ul>
+    <li>Tyler Bond +$100 March 17 / Тайлер Бонд +$100 17 березня</li>
+    <li>Meng Lu +$50 March 17 / Менг Лу +$50 17 березня</li>
+    <li>Donna Bond +$100 March 18 / Донна Бонд +$100 18 березня</li>
+    <li>Serafima Krikunova +$300 March 19 / Серафіма Крикунова +$300 19 березня</li>
+    <li>Kateryna Sadovnycha +$50 March 19 / Катерина Садовнича +$50 19 березня</li>
+    <li>Nathanael Tjepkema +$100 March 20 / Натанаель Тьєпкема +$100 20 березня</li>
+    <li>Olga Nakhodkina +$500 April 4 / Ольга Нахідкіна +$500 4 квітня</li>
+    <li>James Linahon +$100 April 15 / Джеймс Лінахон +$100 15 квітня</li>
+    <li>Manol Manolov +$50 April 17 / Манол Манолов +$50 17 квітня</li>
+    <li>Biko Wright +$200 May 27 / Біко Райт +$200 27 травня</li>
+    <li>Mary Livesey +$100 June 11 / Мері Лівсі +$100 11 червня</li>
+    <li>Olga Gleyser +$200 June 24 / Ольга Глейсер +$200 24 червня</li>
+    <li>Irina Gunica +$50 July 15 / Ірина Гуніка +$50 15 липня</li>
+    <li>Anna Derugin +$150 July 20 / Анна Деругін +$150 20 липня</li>
+    <li>Kateryna Sadovnycha +$50 August 6 / Катерина Садовнича +$50 6 серпня</li>
+    <li>Markus Höhnerbach +$50 August 11 / Маркус Гьонербах +$50 11 серпня</li>
+    <li>Olga Nakhodkina +$300 January 3 / Ольга Нахідкіна +$300 3 січня</li>
+    <li>Jamie Biancalana +$100 January 3 / Джеймі Біанкалана +$100 3 січня</li>
+    <li>Serafima Krikunova +$400 January 3 / Серафіма Крикунова +$400 3 січня</li>
+    <li>Sergey Senkin +$50 January 3 / Сергій Сенкін +$50 3 січня</li>
+    <li>Raleigh Johnson +$200 January 3 / Рейлі Джонсон +$200 3 січня</li>
+    <li>Sravan Gondipalli +$150 January 28 / Срован Гондіпалл +$150 28 січня</li>
+</ul>
+
+	</div>
     <script>
-        const translations = {
-            en: {
-                dedication: "This page is dedicated to our younger brothers, Daniil and Oleksey, who tragically passed away recently. Love and Rest In Peace,",
-                intro: "Dear friends, our names are Dmitro and Maksym.",
-                description: "This page is created for our humanitarian relief organization. Currently, all our volunteering work is funded by ourselves with personal income and donations we've received from generous volunteers (shown below). However, more funding can provide additional aid, which we cannot fund with a paycheck.",
-                update: "Update: Being a part of the Bay Area massive wave of layoffs, currently, and for the next short term, the volunteer work can only be funded through donations.",
-                record: "Below is a record of what we have finished so far at our own expense and what we are looking to do with funds provided by donations. With the current income, we will continue at this steady pace, but more can be accomplished with additional funding.",
-                donation_thanks: "We will update this page every week and manually enter all donors as donations arrive. Any amount or sharing is appreciated. All donations will 100% go toward purchasing supplies, humanitarian aid, housing, or other donations. We can provide receipts and photos for anyone who requests them. Thank you to everyone.",
-                completed: "Completed Personally:",
-                update_2024: "2024 Update:",
-                thank_you: "Thank you to our donors:",
-                contact: "If you have donated and are missing from the list, or would like to contact me, please reach out to my email"
-            },
-            uk: {
-                dedication: "Ця сторінка присвячена нашим молодшим братам, Данілу та Олексію, які трагічно загинули нещодавно. Любов і спокій,",
-                intro: "Дорогі друзі, нас звуть Дмитро та Максим.",
-                description: "Ця сторінка створена для нашої гуманітарної організації. Наразі всю нашу волонтерську роботу фінансуємо ми самі за рахунок особистого доходу та донорів, яких ми отримуємо від щедрих волонтерів (показано нижче). Однак додаткове фінансування дозволить надати більше допомоги, яку ми не можемо забезпечити за допомогою заробітної плати.",
-                update: "Оновлення: Будучи частиною масових скорочень в Бей-Реа, наразі і в найближчій перспективі, наша волонтерська діяльність може бути профінансована лише за рахунок донатів.",
-                record: "Нижче наведено запис про те, що ми завершили на власні кошти і що ми плануємо зробити за фінансуванням донорів. За поточний дохід ми продовжимо в такому ж темпі, але більше можна досягти з додатковим фінансуванням.",
-                donation_thanks: "Ми оновлюємо цю сторінку щотижня і вносимо всіх донорів вручну, як тільки надходять донати. Будь-яка сума або поширення вітаються. Всі донати 100% йдуть на покупку необхідних товарів, гуманітарну допомогу, житло або інші потреби. Ми можемо надати чеки та фото для кожного, хто цього потребує. Дякуємо всім.",
-                completed: "Завершено особисто:",
-                update_2024: "Оновлення на 2024 рік:",
-                thank_you: "Дякуємо донорам:",
-                contact: "Якщо ви зробили донат і вас немає в списку, або хочете зв’язатися зі мною, будь ласка, напишіть на мій email"
-            }
-        };
-        let currentLanguage = 'uk';
-        document.getElementById("language-switcher").addEventListener("click", function() {
-            currentLanguage = currentLanguage === 'uk' ? 'en' : 'uk';
-            updateTextContent();
-            this.textContent = currentLanguage === 'uk' ? 'Переключити на англійську / Switch to English' : 'Переключити на українську / Switch to Ukrainian';
-        });
-        function updateTextContent() {
-            for (const key in translations[currentLanguage]) {
-                const element = document.getElementById(key);
-                if (element) {
-                    element.textContent = translations[currentLanguage][key];
-                }
-            }
-        }
-        updateTextContent();
-        const images = ['photos/max.jpg', 'photos/max_with_soldiers.jpg', 'photos/Donations carried from airport on Dec 18.jpg', 'photos/Food and supplies to Kharkiv.jpg', 'photos/Handing out medicines.jpg', 'photos/Handing out supplies.jpg', 'photos/Homeless dogs in Bucha.jpg', 'photos/Hosting family for 5 days.jpg', 'photos/Kherson.jpg', 'photos/kids\' and womens\' shelter near Przemyśl.jpg', 'photos/Medical and Electronics transport Warsaw to Lviv.jpg', 'photos/Optics and soldier kits.jpg', 'photos/Packing Bags from USA to Ukraine.jpg', 'photos/Painting shelter near Przemyśl.jpg', 'photos/Plate armor before treatment and assembly.jpg', 'photos/Plate armor shipped to Kharkiv.jpg', 'photos/Protected statues in Kyiv.jpg', 'photos/PXL_20240122_193908656.jpg', 'photos/Second round of supplies and test run of new car across border.jpg', 'photos/Second round of supplies and testing new car across border.jpg', 'photos/Sleeping bags.jpg', 'photos/Supplies purchased for Lviv.jpg', 'photos/Supplies received .jpg', 'photos/Supplies Received .jpg', 'photos/Supplies received.jpg', 'photos/Supplies Recevied .jpg', 'photos/Supply delivery to Cherkassy.jpg', 'photos/Transporting 20 Bags USA to Ukraine via KLM LOT airlines.jpg', 'photos/Van Delivery for Lviv.jpg'];
+const images = [
+    'photos/max.jpg',  // this one stays at the very top
+    'photos/max_with_soldiers.jpg',  // second in line
+    'photos/photo_2024-11-09_20-47-16.jpg',  // new image added
+    'photos/photo_2024-11-09_20-47-38.jpg',  // new image added
+    'photos/photo_2024-11-09_20-47-46.jpg',  // new image added
+    'photos/Church for Refugees in Lviv.jpg',
+    'photos/Donations carried from airport on Dec 18.jpg',
+    'photos/Food and supplies to Kharkiv.jpg',
+    'photos/Handing out medicines.jpg',
+    'photos/Handing out supplies.jpg',
+    'photos/Kherson.jpg',
+    'photos/kidsa\' nd womens\' shelter near Przemyśl.jpg',
+    'photos/Medical and Electronics transport Warsaw to Lviv.jpg',
+    'photos/Optics and soldier kits.jpg',
+    'photos/Packing Bags from USA to Ukraine.jpg',
+    'photos/Plate armor before treatment and assembly.jpg',
+    'photos/Plate armor shipped to Kharkiv.jpg',
+    'photos/PXL_20240122_193908656.jpg',
+    'photos/Second round of supplies and test run of new car across border.jpg',
+    'photos/Second round of supplies and testing new car across border.jpg',
+    'photos/Sleeping bags.jpg',
+    'photos/Supplies purchased for Lviv.jpg',
+    'photos/Supplies received .jpg',
+    'photos/Supplies Received .jpg',
+    'photos/Supplies received.jpg',
+    'photos/Supplies Recevied    .jpg',
+    'photos/Supply delivery to Cherkassy.jpg',
+    'photos/Transporting 20 Bags USA to Ukraine via KLM LOT airlines.jpg',
+    'photos/Van Delivery for Lviv.jpg'
+];
+
         let currentIndex = 0;
         const imageElement = document.getElementById("image-cycler");
         document.getElementById("next").addEventListener("click", function() {
