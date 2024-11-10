@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cycler</title>
+    <style>
+        #image-cycler { 
+            width: auto; 
+            height: 300px; 
+            object-fit: contain; 
+            display: block;
+            margin: 0 auto; 
+        }
+        body { font-family: Arial, sans-serif; }
+        .content { margin-top: 20px; padding: 20px; }
+        .buttons { text-align: center; }
+        .buttons button { margin: 10px; padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <img id="image-cycler" src="photos/max.jpg" alt="Image Cycler">
+    <div class="buttons">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    <div class="content">
+        <p>This page is dedicated to our younger brothers, Daniil and Oleksey, who tragically passed away recently. Love and Rest In Peace,</p>
+        <p>Dear friends, our names are Dmitro and Maksym.</p>
+        <p>This page is created for our humanitarian relief organization. Currently, all our volunteering work is funded by ourselves with personal income and donations we've received from generous volunteers (shown below), However, more funding can provide additional aid, which we cannot fund with a paycheck.</p>
+        <p>Below is a record of what we have finished so far at our own expense and what we am looking to do with funds provided by donations. With the current income we will continue at this steady pace, but more can be accomplished with additional funding.</p>
+        <p>We will update this page every week and manually enter all donors as donations arrive. Any amount or sharing is appreciated. All donations will 100% go toward purchasing supplies, humanitarian aid, housing, or other donations. We can provide receipts and photos to anyone who needs. Thank you all.</p>
+        <p>Completed Personally:</p>
+        <ul>
+            <li>350 hours volunteer time = $8750 in company match donations to several select Ukraine funds</li>
+            <li>Ongoing financial support for multiple families = $3000(approx)</li>
+        </ul>
+		<p>Updates for 2024:</p>
+        <ul>
+            <li>Sent 2 more AGM Thermal Monoculars</li>
+            <li>Sent parts for 5 FPV drones</li>
+            <li>Sent 1 DJI Mavic Drone</li>
+            <li>Sent 1 Armalite nightvision monocular</li>
+            <li>Sent 4 AGM Thermal Monoculars</li>
+            <li>Sent 5 FPV drones</li>
+            <li>Sent 3 Pixhawk autopilot controllers</li>
+            <li>Sponsored 4 Ukrainian refugees abroad</li>
+            <li>13 luggage supply bags delivered to Warsaw airport</li>
+            <li>Purchased in USA, Poland, and donated supplies (using Bereavement time) ~ $6000:
+                <ul>
+                    <li>1 car, 2002 Ford Focus hatchback</li>
+                    <li>1 thermal monocular</li>
+                    <li>12 optics</li>
+                    <li>12 weaver kits</li>
+                    <li>12 flashlights</li>
+                    <li>6 AR500 armor vests</li>
+                    <li>15 zero deg sleeping bags</li>
+                    <li>20 power banks</li>
+                    <li>2 generators</li>
+                    <li>10 inverters</li>
+                    <li>2 car batteries</li>
+                    <li>3 pairs of mil boots</li>
+                    <li>10 galoshes</li>
+                    <li>3 backpacks</li>
+                    <li>2 laptops</li>
+                    <li>2 winter uniforms</li>
+                    <li>30 USB lights</li>
+                    <li>20 pair gloves</li>
+                    <li>Various medical supplies</li>
+                    <li>30 CAT7 and SOF tourniquets</li>
+                    <li>60 civilian med kits</li>
+                    <li>10 chest seals</li>
+                    <li>Drugs, antibiotics, painkillers, bandages, patches, etc.</li>
+                    <li>100 kg dog food</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>20 class 3 armor vests with 40 AR500 6mm plates and custom coating</li>
+            <li>Item donations to Kharkiv bought and brought from USA = ($4000 total):
+                <ul>
+                    <li>20 NAR CAT7 tourniquets</li>
+                    <li>20x uniforms</li>
+                    <li>20x gloves</li>
+                    <li>2x boots</li>
+                    <li>1x military backpack</li>
+                    <li>1x helmet</li>
+                    <li>60L fuel</li>
+                    <li>3x plate carrier</li>
+                    <li>4x pouch</li>
+                    <li>8x utility bag</li>
+                    <li>16x kneepads</li>
+                    <li>2x power banks</li>
+                    <li>1x solar panel</li>
+                    <li>15x folding shovels</li>
+                    <li>8x sleeping bags</li>
+                    <li>11x soldier medkits</li>
+                    <li>50x civilian med kits (hemostatic bandage, tourniquet, antibiotic, bandage)</li>
+                    <li>2x ceramic Level 3 carrier plates</li>
+                    <li>2x AR500 steel level 3 carrier plates</li>
+                    <li>1x DJI Mavic2 drone</li>
+                    <li>1x Armalite nightvision optic</li>
+                    <li>1x AGM scout thermal optic</li>
+                    <li>1x laptop</li>
+                    <li>3x 3x9x40 optics</li>
+                    <li>1x Holosun holographic sight</li>
+                    <li>8x weaver rail accessories</li>
+                </ul>
+            </li>
+            <li>Transportation of 20 bags for others from USA to Warsaw, Poland - 0.5 tonnes of supplies</li>
+            <li>Covering evacuation fees for family from occupied Kherson to Zaporizhia</li>
+        </ul>
+        <ul>
+            <li>Manufacture, order, and shipment of 26 AR400 armor plates to Kharkiv</li>
+            <li>Purchase, packaging, and shipment of food, medicine, clothes, and supplies to soldiers in Kharkiv</li>
+            <li>Donation of gas masks, antibiotics, bags, tourniquets, quickclot, and sleeping bags to soldiers in Cherkassy</li>
+            <li>Transportation of people from Ukraine/Poland border to resettle within Poland = 35 persons so far to Krakow (3hr), Wroclaw(5hr), Poznan(8hr), Warsaw(5hr), Katowice(4hr)</li>
+            <li>Temporary housing for families = Rent for 1 month for family of 2</li>
+            <li>Temporary housing for families = Large apartment with 3 rooms and 7 days stay in Krakow</li>
+            <li>Purchase and delivery of bulk food and supplies to Ukraine = 4 deliveries, 4000lbs total</li>
+            <li>Direct monetary donations to various families</li>
+            <li>Acquired a car with registration to cross borders into Ukraine</li>
+            <li>Feeding abandoned pets in Kyiv, Lviv, and Irpin regions</li>
+        </ul>
+        <p>Completed with other foundations:</p>
+        <ul>
+            <li>Driver to Cherkassy Oblast, transportation of 2 full cars of food and evacuation of 15 people</li>
+            <li>Driver and delivery of 4 transportation vans to Lviv to transport people from Kyiv organized and funded by Every Nation Madrid <a href="www.vidapasionada.org">www.vidapasionada.org</a></li>
+            <li>Retrofit and paint old school building to house 800 people, project by Patrycjusz Gaweł <a href="https://zrzutka.pl/unitatem">https://zrzutka.pl/unitatem</a></li>
+        </ul>
+        <p>Note: Under Ukrainian law photos of military and military activity are not allowed, unless provided by recipients with blurred faces.</p>
+        <p>Thank you donors:</p>
+        <ul>
+            <li>Tyler Bond +$100 March 17</li>
+            <li>Meng Lu +$50 March 17</li>
+            <li>Donna Bond +$100 March 18</li>
+            <li>Serafima Krikunova +$300 March 19</li>
+            <li>Kateryna Sadovnycha +$50 March 19</li>
+            <li>Nathanael Tjepkema +$100 March 20</li>
+            <li>Olga Nakhodkina +$500 April 4</li>
+            <li>James Linahon +$100 April 15</li>
+            <li>Manol Manolov +$50 April 17</li>
+            <li>Biko Wright +$200 May 27</li>
+            <li>Mary Livesey +$100 June 11</li>
+            <li>Olga Gleyser +$200 June 24</li>
+            <li>Irina Gunica +$50 July 15</li>
+            <li>Anna Derugin +$150 July 20</li>
+            <li>Kateryna Sadovnycha +$50 August 6</li>
+            <li>Markus Höhnerbach +$50 August 11</li>
+            <li>Olga Nakhodkina +$300 January 3</li>
+            <li>Jamie Biancalana +$100 January 3</li>
+            <li>Serafima Krikunova +$400 January 3</li>
+            <li>Sergey Senkin +$50 January 3</li>
+            <li>Raleigh Johnson +$200 January 3</li>
+            <li>Sravan Gondipalli +$150 January 28</li>
+        </ul>
+        <p>If you have donated and are missing from the list, or would like to contact me, please reach out to my email <a href="mailto:dmitryponv@gmail.com">dmitryponv@gmail.com</a></p>
+    </div>
+    <script>
+        const images = [
+            'photos/max.jpg',
+            'photos/max_with_soldiers.jpg',
+            'photos/Anti war rally in front of SF city hall.jpg',
+            'photos/Border crossing into Poland.jpg',
+            'photos/Church for Refugees in Lviv.jpg',
+            'photos/Destroyed Russian Tanks in Irpin.jpg',
+            'photos/Donations carried from airport on Dec 18.jpg',
+            'photos/Driving Families to Poland.jpg',
+            'photos/Driving families to Poland.jpg',
+            'photos/Driving families to Poland   .jpg',
+            'photos/Driving families to Poland  .jpg',
+            'photos/Driving families to Poland .jpg',
+            'photos/Food and supplies to Kharkiv.jpg',
+            'photos/Handing out medicines.jpg',
+            'photos/Handing out supplies.jpg',
+            'photos/Homeless dogs in Bucha.jpg',
+            'photos/Hosting family for 5 days.jpg',
+            'photos/Kherson.jpg',
+            'photos/kids\' and womens\' shelter near Przemyśl.jpg',
+            'photos/Medical and Electronics transport Warsaw to Lviv.jpg',
+            'photos/Optics and soldier kits.jpg',
+            'photos/Packing Bags from USA to Ukraine.jpg',
+            'photos/Painting shelter near Przemyśl.jpg',
+            'photos/Plate armor before treatment and assembly.jpg',
+            'photos/Plate armor shipped to Kharkiv.jpg',
+            'photos/Protected statues in Kyiv.jpg',
+            'photos/PXL_20240122_193908656.jpg',
+            'photos/Second round of supplies and test run of new car across border.jpg',
+            'photos/Second round of supplies and testing new car across border.jpg',
+            'photos/Sleeping bags.jpg',
+            'photos/Supplies purchased for Lviv.jpg',
+            'photos/Supplies received .jpg',
+            'photos/Supplies Received .jpg',
+            'photos/Supplies received.jpg',
+            'photos/Supplies Recevied    .jpg',
+            'photos/Supply delivery to Cherkassy.jpg',
+            'photos/Transporting 20 Bags USA to Ukraine via KLM LOT airlines.jpg',
+            'photos/Van Delivery for Lviv.jpg'
+        ];
+        let currentIndex = 0;
+        const imageElement = document.getElementById("image-cycler");
+        document.getElementById("next").addEventListener("click", function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex];
+        });
+        document.getElementById("prev").addEventListener("click", function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            imageElement.src = images[currentIndex];
+        });
+    </script>
+</body>
+</html>
